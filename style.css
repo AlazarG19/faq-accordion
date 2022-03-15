@@ -33,12 +33,13 @@ body {
   display: none;
 }
 main {
-  height: 470px;
+  height: 500px;
   width: 70vw;
   display: flex;
   flex-direction: row;
   background: white;
   border-radius: 20px;
+  max-width: 900px;
 }
 .images {
   position: relative;
@@ -97,6 +98,15 @@ main {
 }
 .accordion{
   display: none;
+}
+.container > h1{
+  color:var(--Verydarkgrayishblue);
+}
+.accordion_choice>span{
+  color:var(--VeryDarkgrayishblue)
+}
+.accordion_content{
+  color: var(--Darkgrayishblue);
 }
 .accordion:checked ~ .accordion_content{
   display: block;
