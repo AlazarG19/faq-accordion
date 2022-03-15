@@ -33,7 +33,7 @@ body {
   display: none;
 }
 main {
-  height: 500px;
+  height: 470px;
   width: 70vw;
   display: flex;
   flex-direction: row;
@@ -103,6 +103,14 @@ main {
   padding-bottom: 15px;
   font-size: 12px;
   font-weight: 700;
+}
+.accordion:checked ~ label{
+  padding-bottom: 15px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.accordion:checked ~ label>img{
+  transform: rotateX(180deg);
 }
 @media screen and (max-width: 1000px) {
   main {
