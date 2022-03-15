@@ -74,6 +74,9 @@ main {
 }
 .questions > hr {
   margin: 20px 0;
+  border: none;
+  height: 1px;
+  background: var(--Lightgrayishblue);
 }
 .container > h1 {
   margin-bottom: 30px;
