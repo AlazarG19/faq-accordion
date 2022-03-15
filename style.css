@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+:root {
+  /* Primary */
+  /* Text */
+  --Verydarkdesaturatedblue: hsl(238, 29%, 16%);
+  --Softred: hsl(14, 88%, 65%);
+  /* Gradient */
+  /* Background gradient: */
+  --Softviolet: rgb(175, 103, 233);
+  --Softblue: hsl(240, 73%, 65%);
+  /* Neutral */
+  /* Text */
+  --Verydarkgrayishblue: hsl(237, 12%, 33%);
+  --Darkgrayishblue: hsl(240, 6%, 50%);
+  /* Dividers */
+  --Lightgrayishblue: hsl(240, 5%, 91%);
+}
+body {
+  overflow: hidden;
+  font-family: "Kumbh Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(var(--Softviolet), var(--Softblue));
+}
+.mobile {
+  display: none;
+}
+main {
+  height: 500px;
+  width: 70vw;
+  display: flex;
+  flex-direction: row;
+  background: white;
+  border-radius: 20px;
+}
+.images {
+  position: relative;
+  width: 450px;
+}
+.o-images {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.o-images > img {
+  position: absolute;
+}
+.il {
+  top: 60px;
+  right: 60px;
+}
+.bg {
+  right: 60px;
+  top: -300px;
+}
+.box {
+  position: absolute;
+  right: 352px;
+  top: 195px;
+  z-index: 2;
+}
+.container {
+  width: 35%;
+  padding: 50px 30px;
+  
+}
+.questions > hr {
+  margin: 20px 0;
+}
+.container > h1 {
+  margin-bottom: 30px;
+}
+.accordion_choice{
+  font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.questions > div >label > img {
+  width: 11px;
+  height: 8px;
+  padding-top: 4px;
+}
+.accordion_content{
+  display: none;
+}
+.accordion{
+  display: none;
+}
+.accordion:checked ~ .accordion_content{
+  display: block;
+  font-size: 12px;
+}
+.accordion:checked ~ label{
+  padding-bottom: 15px;
+  font-size: 12px;
+  font-weight: 700;
+}
+@media screen and (max-width: 1000px) {
+  main {
+    width: 80vw;
+  }
+  .bg,
+  .il {
+    right: 10px;
+  }
+  .box {
+    right: 315px;
+  }
+}
+@media screen and (max-width: 1000px) and (min-width: 830px) {
+  main {
+    width: 750px;
+  }
+}
+@media screen and (max-width: 830px) and (min-width: 800px) {
+  main {
+    width: 700px;
+  }
+}
+@media screen and (max-width: 800px) {
+  body{
+      overflow: hidden;
+  }
+    .o-images {
+    display: none;
+  }
+  .box {
+    display: none;
+  }
+  .mobile {
+    transform: scale(.7);
+    position: absolute;
+    display: block;
+    width: 400px;
+    top: -190px;
+  }
+  .mobilebg {
+    position: absolute;
+    display: block;
+    transform: scale(1.18);
+    top: -20px;
+  }
+  .images {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+  }
+  main {
+    margin-top: 90px;
+    justify-content: center;
+    flex-direction: column;
+    height: 550px;
+  }
+  .container {
+      padding: 0;
+      padding-left: 5%;
+      padding-right: 5%;
+      width: 90%;
+      
+  }
+  .container>h1{
+    text-align: center;
+  }
+  .questions{
+      width: 85%;
+      margin: 0 auto;
+  }
+  .questions>div>p{
+    padding-right: 10px;
+  }
+}
